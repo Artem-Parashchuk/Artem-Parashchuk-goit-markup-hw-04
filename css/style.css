@@ -105,6 +105,9 @@ main {
   border-radius: 2px;
   background-color: #404bbf;
 }
+.nav-link.active {
+  color: var(--color-for-hover);
+}
 .nav-link.active:hover::after,
 .nav-link.active:focus::after {
   background-color: var(--color-for-hover);
@@ -140,9 +143,10 @@ main {
 /* ===============/Header================ */
 
 /* ================Hero================== */
-
-.hero-container {
+.hero {
   max-width: 1440px;
+  margin: 0 auto;
+  background-color: #2e2f42;
   padding: 188px 0;
   background-size: cover;
   background-position: center;
@@ -343,6 +347,10 @@ main {
   position: relative;
   overflow: hidden;
 }
+.portfolio-item:hover .portfolio-overlay-text,
+.portfolio-item:focus .portfolio-overlay-text {
+  transform: translateY(0%);
+}
 .portfolio-link {
   display: block;
   cursor: pointer;
@@ -369,10 +377,6 @@ main {
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
-.portfolio-item:hover .portfolio-overlay-text,
-.portfolio-item:focus .portfolio-overlay-text {
-  transform: translateY(0);
 }
 .portfolio-description {
   padding: 32px 16px;
